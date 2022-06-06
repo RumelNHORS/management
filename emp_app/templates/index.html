@@ -1,0 +1,182 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css" integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <title>Employee Management </title>
+      <center>
+      <h1 style="background-color:LightGray; border:2px solid DodgerBlue; color:DodgerBlue;">OFFICE   EMPLOYEE   MANAGEMENT   SYSTEM</h1>
+      </center>
+
+    <!----------navbar start------------->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><h3>EmployeE ManagemenT</h3></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/all_emp"><h5>All Employee</h5></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/add_emp"><h5>AddAnEmployee</h5></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" href="/remove_emp"><h5>RemoveAnEmployee</h5></a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link active" href="/filter_emp"><h5>FilterEmployee</h5></a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+    <!----------navbar end------------->
+
+    <!----------Start Slider------------->
+     <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="{% static 'images/a1.jpg' %}" class="d-block w-100" alt="..." height="600" width="1000">
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="{% static 'images/a5.jpg' %}" class="d-block w-100" alt="..." height="600" width="1000">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/a3.jpg' %}" class="d-block w-100" alt="..." height="600" width="1000">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+    <!------------Slider End--------------->
+    </br>
+
+  </head>
+
+  <body style="background-color:LightGray; border:2px solid DodgerBlue;">
+  <div class="container" style="background-color:LightGray; border:2px solid DodgerBlue;">
+      <h1>Office Employee Management System</h1>
+    <p>Hi! This is Md. Rmel Islam. I'm still a student of Cse(Computer Science Enginnering). I Have worked in Python for long
+    time and now Working in Django. This is my simple office management Project by using Python & Django.
+    Please support me to do somthing big. Thank you.</p>
+      <hr>
+      <a class="btn btn-primary" href="/all_emp" role="button">All Employee</a>
+      <a class="btn btn-primary" href="/add_emp" role="button">Add An Employee</a>
+      <a class="btn btn-primary" href="/remove_emp" role="button">Remove An Employee</a>
+      <a class="btn btn-primary" href="/filter_emp" role="button">Filter Employee</a>
+
+  </div><br><br>
+
+  <div class="container" style="background-color:LightGray; border:2px solid DodgerBlue;">
+    <h2>
+      Here I Have Discribe My Office Employee Management System--
+    </h2><hr>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">All Employee</h5>
+        <p class="card-text">This is All Employee Section. You can see all Employee in your office to Click The "All Employee" button.
+        It's Give your employee details to you. To be Practical or Demo Click the All Employee above. </p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Add An Employee</h5>
+        <p class="card-text">This section is very Importent to an Office management system. After check Your ell employee if you can Want
+        to add a new employee then click the Add An Employee button to given above</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Remove An Employee</h5>
+        <p class="card-text">This section is very Importent to an Office management system. After check Your ell employee if you can Want
+        to add a new employee then click the Add An Employee button to given above</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Filter Employee</h5>
+        <p class="card-text ">This section is very Importent to an Office management system. After check Your ell employee if you can Want
+        to add a new employee then click the Add An Employee button to given above</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div><br>
+
+<div class="container">
+  <div class="card mb-3" style="max-width: 540px;">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{% static 'images/m1.JPG' %}" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Python & Django Devloper</h5>
+        <p class="card-text">Hi! This is Md. Rmel Islam. I'm still a student of Cse(Computer Science Enginnering). I Have worked in Python for long time and now Working in Django. This is my simple office management Project by using Python & Django. Please support me to do somthing big. Thank you..</p>
+        <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-------footer start----------->
+<footer class="bg-dark text-white position-relative">
+  <center>
+    <div class="footer-col"><br>
+      <h6>Follow me</h6>
+      <div class="social-links">
+        <a href="https://www.facebook.com/mdrumel.islam.142"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/RNhors"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/rnhors/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/rumel-islam-5a1727203/"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </center>
+  <p class="text-center py-3 mr-0">© Copyright 2022 www.mycode.com All rights reserved. Developed by MyCode.</p>
+</footer>
+  <!----------footer End------------->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

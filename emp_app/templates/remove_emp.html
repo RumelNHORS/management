@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.rtl.min.css" integrity="sha384-dc2NSrAXbAkjrdm9IYrX10fQq9SDG6Vjz7nQVKdKcJl3pC+k37e7qJR5MVSCS+wR" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <title>Remove An Employee</title>
+    <center>
+      <h1 style="background-color:LightGray; border:2px solid DodgerBlue; color:DodgerBlue;">OFFICE   EMPLOYEE   MANAGEMENT   SYSTEM</h1>
+      </center>
+
+    <!----------navbar start------------->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><h3>EmployeE ManagemenT</h3></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="/all_emp"><h5>All Employee</h5></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/add_emp"><h5>AddAnEmployee</h5></a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" href="/remove_emp"><h5>RemoveAnEmployee</h5></a>
+        </li>
+
+          <li class="nav-item">
+          <a class="nav-link" href="/filter_emp"><h5>FilterEmployee</h5></a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+    <!----------navbar end------------->
+
+  </head>
+  <body style="background-color:LightGray; border:2px solid DodgerBlue;">
+
+  <div class="container">
+      <hr>
+      <a class="btn btn-primary" href="/all_emp" role="button">All Employee</a>
+      <a class="btn btn-primary" href="/add_emp" role="button">Add An Employee</a>
+      <a class="btn btn-primary" href="/remove_emp" role="button">Remove An Employee</a>
+      <a class="btn btn-primary" href="/filter_emp" role="button">Filter Employee</a>
+      <hr>
+  </div>
+
+  <div class="container">
+      <h1>Remove An Employee</h1>
+      <hr>
+
+      <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+        Choose Employ To Be Remove
+      </button>
+          <hr>
+      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+            {% for emp in emps %}
+        <li><a class="dropdown-item" href="/remove_emp/{{emp.id}}">{{emp.first_name}} {{emp.last_name}}</a></li>
+            {% endfor %}
+
+      </ul>
+    </div>
+  </div><br>
+
+  <p class="placeholder-glow">
+  <span class="placeholder col-12"></span>
+</p>
+
+<p class="placeholder-wave">
+  <span class="placeholder col-12"></span>
+</p>
+
+  <!-------footer start----------->
+<footer class="bg-dark text-white position-relative">
+  <center>
+    <div class="footer-col"><br>
+      <h6>Follow me</h6>
+      <div class="social-links">
+        <a href="https://www.facebook.com/mdrumel.islam.142"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/RNhors"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/rnhors/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/rumel-islam-5a1727203/"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </center>
+  <p class="text-center py-3 mr-0">© Copyright 2022 www.mycode.com All rights reserved. Developed by MyCode.</p>
+</footer>
+  <!----------footer End------------->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
