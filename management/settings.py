@@ -11,6 +11,11 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+#import os
+
+import django_heroku
+import dj_database_url
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+
 ]
 
 ROOT_URLCONF = 'management.urls'
@@ -113,6 +120,8 @@ USE_I18N = True
 USE_TZ = True
 
 
+STATIC_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 import os
@@ -124,3 +133,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'project_name/static')]
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+django_heroku.settings(locals())
